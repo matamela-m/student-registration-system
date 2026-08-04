@@ -12,4 +12,4 @@ A simple demonstration project for student module registration.
 ## Technologies
 - HTML
 - CSS
-- JavaScrip
+- JavaScript
