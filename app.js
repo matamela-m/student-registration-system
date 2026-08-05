@@ -8,9 +8,10 @@ form.addEventListener("submit", (event) => {
 
     const studentNumber = document.querySelector("#studentNumber").value.trim();
     const studentName = document.querySelector("#studentName").value.trim();
+    const studentEmail = document.querySelector("#studentEmail").value.trim();
     const moduleCode = document.querySelector("#module").value;
 
-    if (!studentNumber || !studentName || !moduleCode) {
+    if (!studentNumber || !studentName || !studentEmail || !moduleCode) {
         message.textContent = "Complete all required fields.";
         return;
     }
