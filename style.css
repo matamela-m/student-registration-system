@@ -1,27 +1,93 @@
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
+
 body {
-margin: 0;
-font-family: Arial, sans-serif;
-background: #f4f6f8;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e6f7f6 0%, #d3ecea 100%);
 }
+
 .container {
-width: min(90%, 600px);
-margin: 3rem auto;
-padding: 2rem;
-background: white;
-border-radius: 0.75rem;
-box-shadow: 0 0.25rem 1rem rgba(0,0,0,0.1);
+    width: min(90%, 600px);
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.12);
 }
-form { display: grid; gap: 0.75rem; }
-input, select, button {
-width: 100%;
-padding: 0.75rem;
-font: inherit;
+
+h1 {
+    margin-top: 0;
+    color: #1f2937;
+    font-size: 1.75rem;
+    text-align: center;
 }
+
+.container > p {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+
+form {
+    display: grid;
+    gap: 1.1rem;
+}
+
+label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #374151;
+    margin-bottom: -0.4rem;
+}
+
+input,
+select,
 button {
-margin-top: 0.5rem;
-border: 0;
-border-radius: 0.4rem;
-cursor: pointer;
+    width: 100%;
+    padding: 0.75rem;
+    font: inherit;
+    border-radius: 0.5rem;
 }
-#message { font-weight: bold; }
+
+input,
+select {
+    border: 1px solid #d1d5db;
+    background: #f9fafb;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #0d9488;
+    box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
+    background: white;
+}
+
+button {
+    margin-top: 0.75rem;
+    border: 0;
+    background: #0d9488;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #0f766e;
+}
+
+#message {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+    color: #059669;
+    min-height: 1.2rem;
+}
