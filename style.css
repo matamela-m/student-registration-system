@@ -88,6 +88,13 @@ button:hover {
     margin-top: 1rem;
     text-align: center;
     font-weight: bold;
-    color: #059669;
     min-height: 1.2rem;
+}
+
+#message.success {
+    color: #059669;
+}
+
+#message.error {
+    color: #dc2626;
 }

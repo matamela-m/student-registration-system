@@ -11,12 +11,24 @@ form.addEventListener("submit", (event) => {
     const studentEmail = document.querySelector("#studentEmail").value.trim();
     const moduleCode = document.querySelector("#module").value;
 
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     if (!studentNumber || !studentName || !studentEmail || !moduleCode) {
-        message.textContent = "Complete all required fields.";
+        showMessage("Invalid: please complete all required fields.", false);
         return;
     }
 
-    message.textContent = `${studentName} (${studentNumber}) registered for ${moduleCode}.`;
+    if (!emailPattern.test(studentEmail)) {
+        showMessage("Invalid: please enter a valid email address.", false);
+        return;
+    }
 
+    showMessage(`${studentName} (${studentNumber}) registered for ${moduleCode}.`, true);
     form.reset();
 });
+
+function showMessage(text, isSuccess) {
+    message.textContent = text;
+    message.classList.toggle("success", isSuccess);
+    message.classList.toggle("error", !isSuccess);
+}
